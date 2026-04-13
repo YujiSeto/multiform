@@ -20,7 +20,7 @@ export const FormStep3 = () => {
     if (state.email !== "" && state.github !== "") {
       console.log(state);
       alert("Registration completed successfully");
-      history("/");
+      window.location.href = "/";
     } else {
       alert("Please fill in your email and github");
     }
