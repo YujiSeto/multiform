@@ -10,11 +10,19 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
   }
+
+  @media (max-width: 720px) {
+    margin: 15px 0;
+  }
 `;
 
 export const Info = styled.div`
   flex: 1;
   margin-right: 20px;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
 `;
 
 export const Title = styled.div`
@@ -39,6 +47,11 @@ export const IconArea = styled.div<{active: boolean}>`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 720px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 export const Point = styled.div<{active: boolean}>`
@@ -49,4 +62,9 @@ export const Point = styled.div<{active: boolean}>`
   margin-left: 30px;
   margin-right: -6px;
   background-color: ${props => props.active ? '#25cd89' : '#02044a'};
+
+  @media (max-width: 720px) {
+    display: none;
+  }
 `;
+

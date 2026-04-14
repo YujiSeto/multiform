@@ -42,4 +42,19 @@ export const Container = styled.div`
       filter: brightness(1.1);
     }
   }
+
+  @media (max-width: 720px) {
+    .icon {
+      font-size: 60px;
+    }
+
+    h1 {
+      font-size: 22px;
+    }
+
+    button {
+      padding: 15px 30px;
+    }
+  }
 `;
+
