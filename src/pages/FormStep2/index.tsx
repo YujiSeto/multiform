@@ -51,7 +51,7 @@ export const FormStep2 = () => {
 
         <SelectOption
           title="I'm a programmer"
-          description="I started programming less than 2 years ago or more"
+          description="I started programming more than 2 years ago"
           icon="😎"
           selected={state.level === 1}
           onClick={() => setLevel(1)}
