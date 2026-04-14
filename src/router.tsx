@@ -6,7 +6,7 @@ import { Thanks } from "./pages/Thanks";
 
 export const Router = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/multiform">
       <Routes>
         <Route path="/" element={<FormStep1 />} />
         <Route path="/step2" element={<FormStep2 />} />
