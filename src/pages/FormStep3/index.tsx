@@ -4,7 +4,6 @@ import { FormActions, useForm } from "../../contexts/FormContext";
 import { Theme } from "../../components/Theme";
 import { ChangeEvent, useEffect } from "react";
 
-
 export const FormStep3 = () => {
   const history = useNavigate();
   const { state, dispatch } = useForm();
@@ -18,9 +17,7 @@ export const FormStep3 = () => {
 
   const handleNextStep = () => {
     if (state.email !== "" && state.github !== "") {
-      console.log(state);
-      alert("Registration completed successfully");
-      window.location.href = "/";
+      history("/thanks");
     } else {
       alert("Please fill in your email and github");
     }
@@ -34,7 +31,6 @@ export const FormStep3 = () => {
     dispatch({ type: FormActions.setGithub, payload: e.target.value });
   };
 
-  
   return (
     <Theme>
       <C.Container>

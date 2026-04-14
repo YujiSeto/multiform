@@ -38,6 +38,7 @@ export enum FormActions {
   setLevel,
   setEmail,
   setGithub,
+  reset,
 }
 
 const formReducer = (state: State, action: Action) => {
@@ -52,10 +53,13 @@ const formReducer = (state: State, action: Action) => {
       return { ...state, email: action.payload };
     case FormActions.setGithub:
       return { ...state, github: action.payload };
+    case FormActions.reset:
+      return initialData;
     default:
       return state;
   }
 };
+
 
 export const FormProvider = ({ children }: FormProviderProps) => {
   const [state, dispatch] = useReducer(formReducer, initialData);
